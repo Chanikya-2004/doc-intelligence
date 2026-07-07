@@ -1,0 +1,82 @@
+.chipWrapper {
+    width: 100%;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 99px;
+    color: var(--text2);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.chip:hover {
+    background: rgba(79, 156, 249, 0.15);
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.expandedContent {
+    margin-top: 8px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sourceDetails {
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.detailRow:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    color: var(--text3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.value {
+    color: var(--text2);
+    font-family: "Courier New", monospace;
+}
+
+.excerpt {
+    font-size: 10px;
+}
+
+.excerptLabel {
+    color: var(--text3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.excerpt p {
+    color: var(--text2);
+    line-height: 1.5;
+    max-height: 120px;
+    overflow-y: auto;
+}
