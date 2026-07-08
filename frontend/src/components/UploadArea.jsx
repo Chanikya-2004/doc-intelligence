@@ -4,7 +4,7 @@ import axios from "axios";
 import { Upload, CheckCircle, Loader } from "lucide-react";
 import styles from "../styles/UploadArea.module.css";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 
 export default function UploadArea({ onSuccess }) {
     const [uploading, setUploading] = useState(false);
@@ -19,9 +19,7 @@ export default function UploadArea({ onSuccess }) {
         const formData = new FormData();
         formData.append("file", file);
         try {
-            const res = await axios.post(`${API_BASE}/upload`, formData, {
-                headers: { "Content-Type": "multipart/form-data" },
-            });
+            const res = await axios.post(`${API_BASE}/upload`, formData);
             setUploadedFile({
                 filename: res.data.filename,
                 chunks: res.data.pipeline_summary.chunks_created,
