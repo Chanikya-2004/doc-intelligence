@@ -5,7 +5,7 @@ import UploadArea from "./components/UploadArea";
 import ChatWindow from "./components/ChatWindow";
 import styles from "./styles/App.module.css";
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 export default function App() {
   const [documents, setDocuments] = useState([]);
