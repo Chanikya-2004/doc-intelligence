@@ -3,7 +3,7 @@ import axios from "axios";
 import { Trash2, FileText } from "lucide-react";
 import styles from "../styles/DocumentSidebar.module.css";
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 export default function DocumentSidebar({ documents, selectedDoc, onSelectDoc, onDelete, onRefresh }) {
     const [deleting, setDeleting] = useState(null);
