@@ -26,3 +26,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Stray file from a pip typo
+backend/26.1.2
